@@ -56,7 +56,7 @@
 % Sections formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -88,11 +88,37 @@
 }
 
 
-\newcommand{\resumeEducationHeading}[6]{
+\newcommand{\resumeEducationHeadingPhD}[7]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{p{0.70\textwidth}@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+      \small#3 & \small #4 \\
+      \hspace{.5cm}\parbox{0.6\textwidth}{\small#5} \\ %& \textit{\small #6} \\
+      \small#6 \\ %\textit{\small #6} \\
+      \small#7 \\ %\textit{\small #8} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeEducationHeadingMSc}[9]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{p{0.70\textwidth}@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \small#3 & \small #4 \\
+      \hspace{.5cm}\parbox{0.6\textwidth}{\small#5} \\ %& \textit{\small #6} \\
+      \hspace{.5cm}\parbox{0.6\textwidth}{\small#6} \\ %& \textit{\small #8} \\
+      \small#7 & \small #8 \\
+      \hspace{.5cm}\parbox{0.6\textwidth}{\small#9} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeEducationHeadingShort}[6]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
+      % \textit{\small#5} \\
       \textit{\small#5} & \textit{\small #6} \\
     \end{tabular*}\vspace{-5pt}
 }
@@ -109,7 +135,7 @@
 \newcommand{\resumeOrganizationHeading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textit{\small #2} \\
+      {#1} & \textit{\small #2} \\
       \textit{\small#3}
     \end{tabular*}\vspace{-7pt}
 }
@@ -132,19 +158,20 @@
 %---------- HEADING ----------
 
 \begin{center}
-    \textbf{\Huge \scshape Aras Güngöre} \\ \vspace{3pt}
+    \textbf{\Huge \scshape Voke Brume} \\ \vspace{3pt}
     \small
-    \faMobile \hspace{.5pt} \href{tel:905314204536}{+90 531 420 4536}
+    \faMobile \hspace{.5pt} \href{tel:13044135266}{+1 304 413 5266}
     $|$
-    \faAt \hspace{.5pt} \href{mailto:arasgungore09@gmail.com}{arasgungore09@gmail.com}
+    \faAt \hspace{.5pt} \href{mailto:vrb0002@mix.wvu.edu}{vrb0002@mix.wvu.edu}
     $|$
-    \faLinkedinSquare \hspace{.5pt} \href{https://www.linkedin.com/in/arasgungore}{LinkedIn}
+    \faLinkedinSquare \hspace{.5pt} \href{https://www.linkedin.com/in/voke-brume}{linkedin.com/in/voke-brume}
     $|$
-    \faGithub \hspace{.5pt} \href{https://github.com/arasgungore}{GitHub}
-    $|$
-    \faGlobe \hspace{.5pt} \href{https://arasgungore.github.io}{Portfolio}
-    $|$
-    \faMapMarker \hspace{.5pt} \href{https://www.google.com/maps/place/Bogazici+University+North+Campus/@41.0863067,29.0441352,15z/data=!4m5!3m4!1s0x0:0x9d2497b07c8edb2f!8m2!3d41.0863067!4d29.0441352}{Istanbul, Turkey}
+    \faGithub \hspace{.5pt} \href{https://github.com/voke-brume}{github.com/voke-brume}
+    % $|$
+    % \faGlobe \hspace{.5pt} \href{https://arasgungore.github.io}{Portfolio}
+    % $|$
+    
+    \faMapMarker\hspace{.5pt} \href{https://www.google.com/maps/search/Engineering+Research+Building/@39.6459245,-79.9743197,17z/data=!3m1!4b1?authuser=0&entry=ttu}{Morgantown, WV}
 \end{center}
 
 
@@ -154,26 +181,56 @@
 \section{Education}
   \vspace{3pt}
   \resumeSubHeadingListStart
-    
-    \resumeEducationHeading
-      {Boğaziçi University
+    \resumeEducationHeadingPhD
+      {West Virginia University
       % \normalfont{(Admission rate: 0.09\%)}
-      }{Istanbul, Turkey}
-      {B.Sc. in Electrical and Electronics Engineering;   \textbf{GPA: 3.62/4.00}}{Sep 2018 \textbf{--} Jun 2023}
-      {Minor Degree in Computer Science;
-      \textbf{GPA: 3.58/4.00}}{Oct 2020 \textbf{--} Jun 2023}
-        \resumeSubHeadingListStart
-        \small{\item{
-            % \textbf{Relevant coursework:} Materials Science, Electrical Circuits I-II, Digital System Design, Numerical Methods, Probability Theory, Electronics I-II, Signals and Systems, Electromagnetic Field Theory, Energy Conversion, System Dynamics and Control, Communication Engineering, Pattern Recognition, Introduction to Digital Signal Processing, Introduction to Digital Communications, Introduction to Database Systems, Introduction to Image Processing, Machine Vision
-            \textbf{National University Admission Exam (YKS):} Ranked $75^{th}$ in Mathematics and Science among ca. 2.3 million candidates with a test score of 489.92/500. (Jul 2018)}}
-        \resumeSubHeadingListEnd
+      }{Morgantown, WV}
+      % {Ph.D.\ in Computer Science; \textbf{GPA:\@ 0.00/4.00}}
+      {Ph.D.\ in Computer Science
+      }{Anticipated \textbf{--} 2027}
+      {Research Interest: \textit{Machine Learning, Domain Adaptation, Computer Vision, Smart Health, Biomedical Imaging}}
+      {Graduate Certificate in Applied Statistics}
+      {Graduate Certificate in Digital Health; \textbf{GPA:\@ 4.00}}
+
+
+    \resumeEducationHeadingMSc
+      {West Virginia University
+      % \normalfont{(Admission rate: 0.09\%)}
+      }{Morgantown, WV}
+      {M.Sc.\ in Computer Science; \textbf{GPA:\@ 3.89}
+      }{August 2021 \textbf{--} August 2024}
+      {Area of Emphasis (AoE): \textit{Computational Data Science}}
+      % \href{https://arasgungore.github.io}{Portfolio}
+      {\href{https://researchrepository.wvu.edu/etd/12607}{Thesis: \textit{A Domain Adaptation Approach for Morphology-independent Cell Instance Segmentation}}}
+      {Graduate Certificate in GIS and Spatial Analysis; \textbf{GPA:\@ 4.00}
+      }{}
+      {Coursework: \textit{Geospatial Modeling, Spatial Hydrology, Advanced Spatial Analysis in Resource Management, Open-Source Spatial Analytics, Spatial Analyst Project}}
+        % \resumeSubHeadingListStart
+        %   \small{\item{
+        %       % \textbf{Relevant coursework:} Materials Science, Electrical Circuits I-II, Digital System Design, Numerical Methods, Probability Theory, Electronics I-II, Signals and Systems, Electromagnetic Field Theory, Energy Conversion, System Dynamics and Control, Communication Engineering, Pattern Recognition, Introduction to Digital Signal Processing, Introduction to Digital Communications, Introduction to Database Systems, Introduction to Image Processing, Machine Vision
+        %       \textbf{Coursework:} Geospatial Modeling, Spatial Hydrology, Advanced Spatial Analysis, Open-Source Spatial Analytics, Project}}
+        % \resumeSubHeadingListEnd
+
+      
+    % \resumeEducationHeading
+    %   {University of Lagos
+    %   % \normalfont{(Admission rate: 0.09\%)}
+    %   }{Akoka, Lagos}
+    %   {B.Sc.\ in Botany & Microbiology;   
+    %   \textbf{GPA:\@ 3.67/4.00}}{August 2021 \textbf{--} August 2024}
+      % {Graduate Certificate in Spatial Analysis;
+      % \textbf{GPA:\@ 4.00/4.00}}{August 2021 \textbf{--} August 2024}
+        % \resumeSubHeadingListStart
+        % \small{\item{
+        %     % \textbf{Relevant coursework:} Materials Science, Electrical Circuits I-II, Digital System Design, Numerical Methods, Probability Theory, Electronics I-II, Signals and Systems, Electromagnetic Field Theory, Energy Conversion, System Dynamics and Control, Communication Engineering, Pattern Recognition, Introduction to Digital Signal Processing, Introduction to Digital Communications, Introduction to Database Systems, Introduction to Image Processing, Machine Vision
+        %     \textbf{Area of Emphasis (AoE):} Computatational Data Science}}
+        % \resumeSubHeadingListEnd
     
     % \resumeSubheading
       % {Kocaeli Science High School
       % \normalfont{(Admission rate: 0.85\%)}
       % }{Kocaeli, Turkey}
       % {High School Diploma;   \textbf{GPA: 97.03/100}}{Sep 2014 \textbf{--} Jun 2018}
-    
   \resumeSubHeadingListEnd
 
 
@@ -185,11 +242,15 @@
   \resumeSubHeadingListStart
     \small{\item{
         
-        \textbf{Languages:}{ C/C++, C\#, Java, Python, Go, JavaScript, TypeScript, SQL, Swift, Scala, MATLAB, R} \\ \vspace{3pt}
+        \textbf{Languages:}{ Python, R, Java, C/C++, JavaScript, TypeScript, Scala, Prolog} \\ \vspace{3pt}
         
-        \textbf{Technologies:}{ Qt, Flask, Django, Node.js, React.js, MySQL, MongoDB, Git, SVN, Docker, AWS, Kubernetes, GCP, Kafka, RabbitMQ, OpenCV, PyTorch, TensorFlow} \\ \vspace{3pt}
+        \textbf{Database Query Languages:}{ SQL Server, MySQL} \\ \vspace{3pt}
+
+        \textbf{Deep Learning Frameworks:}{ Pytorch, Keras, TensorFlow} \\ \vspace{3pt}
+
+        \textbf{Data Visualization:}{ Tableau, Excel, Python, R, draw.io} \\ \vspace{3pt}
         
-        \textbf{Methodologies:}{ Agile, Scrum, OOP, Functional Programming, DevOps, CI/CD, TDD} \\ \vspace{3pt}
+        \textbf{Technologies:}{ Git, HPC, AutoCAD, ArcGIS, Adobe Illustrator \& InDesign} \\ \vspace{3pt}
         
     }}
   \resumeSubHeadingListEnd
@@ -198,100 +259,81 @@
 
 %----------- EXPERIENCE -----------
 
-\section{Experience}
+\section{Relevant Experience}
   \vspace{3pt}
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Avikon}{Istanbul, Turkey}
-      {Software Engineer}{Dec 2023 \textbf{--} Present, Full-time}
+      {WVU Vision Lab}{Morgantown, WV}
+      {Graduate Researcher}{Jan 2023 \textbf{--} Present}
         \resumeItemListStart
-            \resumeItem{Designed a Qt-based chat application utilizing TCP for real-time communication within a client-server architecture, demonstrating expertise in socket programming, data serialization, and message routing.}
-            \resumeItem{Crafted message types in IDL and designed a data-centric publish-subscribe architecture based on a flyweight design pattern to implement OpenDDS for a radar system's command and control interface. Utilized QoS policies to facilitate the transmission of both volatile and persistent data across different topics.}
-            \resumeItem{Implemented a fully asynchronous AMQP-based C++ client with a layered architecture for RabbitMQ message broker to ensure seamless message handling among multiple topics.}
-            \resumeItem{Developed a cross-platform asynchronous program to refine UAV detection for a GIS application. Benchmarked point-in-polygon algorithms with a GeoJSON polygon database concurrently fetched from MongoDB.}
+          \resumeItem{Conduct research on the application of machine learning to solving computer vision tasks in the biomedical field.}
+          \resumeItem{Build Neural Networks and data processing pipelines for the domain adaptation of State-of-the-art algorithms using HPC's.}
+          \resumeItem{Design, write, and run experiments, and create camera-ready visualizations for concepts and results that are included in publication submission.}
         \resumeItemListEnd
 
     \resumeSubheading
-      {SemperTech}{Istanbul, Turkey}
-      {Software Engineer}{Sep 2023 \textbf{--} Dec 2023, Full-time}
+      {WVU Housing \& Residence Life}{Morgantown, WV}
+      {Graduate Service Assistant, Summer Conference Assistant}{Jan. 2021 \textbf{--} Present}
         \resumeItemListStart
-            \resumeItem{Worked on the “Arçelik Digital Home Energy” project in a collaborative effort with DAI-Labor at the Technical University of Berlin under the supervision of \href{https://www.linkedin.com/in/prof-dr-dr-h-c-sahin-albayrak-65452a1/}{\color{blue}Prof. Dr. Şahin Albayrak}.}
-            \resumeItem{Simulated discovery, pairing, and data exchange processes using the EEBUS protocol suite with C\# and Go. Migrated the framework from Go to C++ in order to ensure future adaptability for smart home IoT devices.}
-            \resumeItem{Implemented the TLS protocol for secure data exchange using the X.509 standard and integrated multicast DNS for seamless communication to complement the development of SHIP and SPINE protocols.}
+          \resumeItem{Supervise hourly staff in ensuring orderly conduct and decorum in multiple university dormitories.}
+          \resumeItem{Act as a liaison between hourly staff, desk manager, Resident Life Specialist, and the Assistant Director of Residence Life.}
+          \resumeItem{Supervise assigned dormotories and document unusual situations that may pose safety risks or inconvenience to residents and staff.}
+          \resumeItem{Complete incident reports by documenting significant events that may require working with first responders and testifying in court.}
         \resumeItemListEnd
-
-    % \resumeSubheading
-      % {Scale AI}{San Francisco, California, United States (Remote)}
-      % {Prompt Engineer}{Mar 2023 \textbf{--} Sep 2023, Freelance}
-        % \resumeItemListStart
-            % \resumeItem{Crafted elaborate Turkish prompts for various generative AI tasks. Tailored prompts using well-defined formats such as natural language questions and structured inputs based on the task's domain to fine-tune the LLM, improving the chatbot's responses and enhancing overall performance.}
-            % \resumeItem{Provided user feedback by reviewing and scoring the chatbot's responses to ensure they align with intended chatbot behaviors and the chatbot produces accurate and contextually appropriate responses to given prompts.}
-            % \resumeItem{Engaged in collaborative meetings with cross-functional teams and project coordinators, actively seeking guidance, addressing queries, and collectively brainstorming strategies to generate higher-quality prompts.}
-        % \resumeItemListEnd
 
     \resumeSubheading
-      {Max Planck Institute for Intelligent Systems}{Stuttgart, Baden\textbf{-}Württemberg, Germany}
-      {Undergraduate Researcher}{Jun 2022 \textbf{--} Aug 2022, Internship}
+      {Davis College of Design and Community Development}{Morgantown, WV}
+      {Graduate Teaching Assistant to Professor Michael Hasenmyer}{August 2018 \textbf{--} Dec. 2018}
         \resumeItemListStart
-            \resumeItem{Engaged in collaborative research within the Robotics, Collectives and Learning subgroup at the Physical Intelligence Department with Ph.D. students \href{https://www.linkedin.com/in/sinan-ozgun-demir-981311129/}{\color{blue}Sinan Özgün Demir} and \href{https://www.linkedin.com/in/alpkaracakol/}{\color{blue}Alp Can Karacakol} on a project about 3D printing and heat-assisted magnetic programming of soft machines under the supervision of \href{https://www.linkedin.com/in/metin-sitti-0a8a712/}{\color{blue}Prof. Dr. Metin Sitti}.}
-            \resumeItem{Optimized a C++ ROS package for real-time conversion of 3D motion controller events to ROS messages, achieving high-frequency and buffer-free synchronization.}
-            \resumeItem{Developed an Arduino Mega driver to activate a laser and pressure regulator, for monitoring coil temperatures and PID tuning to control the coil currents. Established a robust ROS-Arduino communication network by integrating ROSSerial and handshaking to simulate a 3D printing and magnetic programming process with Python.}
-            % \resumeItem{Designed the project's system and software architecture, flowchart, and state machine diagram. Expanded G-code capabilities by incorporating spherical coordinates to specify the direction of magnetization for shape morphing.}
+          \resumeItem{Assisted with the setting up exercises and other indoor/outdoor class activities.}
+          \resumeItem{Conducted office-hour sessions to help students' with course work.}
+          \resumeItem{Graded assignments and exams.}
+          \resumeItem{Performed students' score recording, calculation, and assigning of grades.}
         \resumeItemListEnd
-    
-    % \resumeSubheading
-      % {Nanonetworking Research Group, Boğaziçi University}{Istanbul, Turkey}
-      % {Undergraduate Researcher}{Oct 2021 \textbf{--} Jun 2022, Part-time}
-        % \resumeItemListStart
-            % \resumeItem{Worked on the “Design and Implementation of Molecular Communication Systems Using Index Modulation” project under the supervision of \href{https://www.linkedin.com/in/alipusane/}{\color{blue}Prof. Dr. Ali Emre Pusane}.}
-            % \resumeItem{Simulated the Brownian motion of molecules in a SISO MCvD system and predicted simulation parameters such as receiver radius, diffusion coefficient, and transmitter-receiver distance using CNNs with Keras and TensorFlow.}
-            % \resumeItem{Plotted the arrival of molecules per symbol duration in a SISO MCvD system using Binomial, Poisson, and Gaussian model approximations with MATLAB.}
-            % \resumeItem{Ran Monte Carlo simulations of the Gaussian model to encode and decode randomized binary sequences in a SISO MCvD system using BCSK modulation technique and calculated the bit error rate on Z-channel.}
-        % \resumeItemListEnd
 
-    % \vspace{20pt}
     \resumeSubheading
-      {SESTEK Speech Enabled Software Technologies}{Istanbul, Turkey}
-      {AI Research and Development Intern}{Jan 2022 \textbf{--} Feb 2022, Internship}
+      {Davis College of Design and Community Development}{Morgantown, WV}
+      {Graduate Research Assistant to Professor Vaike Haas}{August 2017 \textbf{--} May 2018}
         \resumeItemListStart
-            % \resumeItem{Executed diverse NLP tasks, including NER, POS tagging, sentiment analysis, text classification, and extractive and generative QA using transformers and Hugging Face libraries. Conducted a thorough literature review on information retrieval and reading comprehension to stay updated on SOTA ML models.}
-            \resumeItem{Developed a generative QA system with dense passage retrieval (DPR) and retrieval-augmented generation (RAG) techniques using the Haystack framework and PyTorch.}
-            \resumeItem{Worked on a Turkish open-domain QA system made by fine-tuning BERTurk and XLM-Roberta models. Tabularized exact match and F1 scores derived from DeepMind's XQuAD and various Turkish data sets.}
+          \resumeItem{Contributed to the creation of course material for plant species identification using Adobe Creative Suite.}
+          \resumeItem{Assisted with stream survey of the Monogahela River using a precision laser receiver.}
+          \resumeItem{Collation and analysis of research data using Excel.}
         \resumeItemListEnd
 
-    % \resumeSubheading
-      % {Meteksan Defense Industry Inc.}{Ankara, Turkey}
-      % {Analog Design Engineering Intern}{Jul 2021 \textbf{--} Aug 2021, Internship}
-        % \resumeItemListStart
-            % \resumeItem{Designed and simulated numerous analog circuits such as voltage-mode controlled buck converter, phase-shifted full-bridge isolated DC-DC converter, and EMI filters with LTspice. Integrated these circuits and implemented a 320 W power distribution unit to be used in a radar system's power circuit board.}
-            % \resumeItem{Researched real-world compatible electronic components to be used in such circuits including GaNFETs, high-side gate drivers, and Schottky diodes.}
-            % \resumeItem{Assembled PCBs of both common and differential mode filters and used VNA Bode 100 to measure the cut-off frequencies.}
-        % \resumeItemListEnd
-    
+    \resumeSubheading
+      {Tosin-Ade Media}{Lagos State, Nigeria}
+      {IT Personnel}{May 2016 \textbf{--} June 2017}
+        \resumeItemListStart
+          \resumeItem{Setup work station of Windows and Mac computers.}
+          \resumeItem{Format, install, and update software and hardware.}
+          \resumeItem{Troubleshoot computer systems, and provide technical support to staff.}
+          \resumeItem{Implement computer online security measures and computer hardware repairs.}
+        \resumeItemListEnd
+
   \resumeSubHeadingListEnd
 
 
 
 %----------- AWARDS & ACHIEVEMENTS -----------
 
-\section{Awards \& Achievements}
-  \vspace{2pt}
-  \resumeSubHeadingListStart
-    \small{\item{
-        \textbf{High Honors Degree:}{ Awarded to Bachelor alumni who have graduated with a GPA greater than or equal to 3.50 by Boğaziçi University. (Jul 2023)} \\ \vspace{3pt}
+% \section{Awards \& Achievements}
+%   \vspace{2pt}
+%   \resumeSubHeadingListStart
+%     \small{\item{
+%         \textbf{High Honors Degree:}{ Awarded to Bachelor alumni who have graduated with a GPA greater than or equal to 3.50 by Boğaziçi University. (Jul 2023)} \\ \vspace{3pt}
 
-        \textbf{TÜBİTAK 2247-C Intern Researcher Scholarship:}{ Awarded to students who take part in research projects carried out by the Scientific and Technological Research Council of Turkey (TÜBİTAK). (Dec 2021 \textbf{--} Jun 2022)} \\ \vspace{3pt}
+%         \textbf{TÜBİTAK 2247-C Intern Researcher Scholarship:}{ Awarded to students who take part in research projects carried out by the Scientific and Technological Research Council of Turkey (TÜBİTAK). (Dec 2021 \textbf{--} Jun 2022)} \\ \vspace{3pt}
     
-        % \textbf{National University Admission Exam (YKS):}{ Ranked $75^{th}$ in Mathematics and Science among ca. 2.3 million candidates with a test score of 489.92/500. (Jul 2018)} \\ \vspace{3pt}
+%         % \textbf{National University Admission Exam (YKS):}{ Ranked $75^{th}$ in Mathematics and Science among ca. 2.3 million candidates with a test score of 489.92/500. (Jul 2018)} \\ \vspace{3pt}
         
-        \textbf{KYK Outstanding Success Scholarship:}{ Awarded to students who have been ranked in the top 100 on National University Admission Exam by Higher Education Credit and Hostels Institution (KYK). (Sep 2018 \textbf{--} Jun 2023)} \\ \vspace{3pt}
+%         \textbf{KYK Outstanding Success Scholarship:}{ Awarded to students who have been ranked in the top 100 on National University Admission Exam by Higher Education Credit and Hostels Institution (KYK). (Sep 2018 \textbf{--} Jun 2023)} \\ \vspace{3pt}
         
-        % \textbf{Boğaziçi University Success Scholarship:}{ Awarded to students who have been ranked in the top 100 on National University Admission Exam by Boğaziçi University. (Sep 2018 \textbf{--} Jun 2023)} \\ \vspace{3pt}
+%         % \textbf{Boğaziçi University Success Scholarship:}{ Awarded to students who have been ranked in the top 100 on National University Admission Exam by Boğaziçi University. (Sep 2018 \textbf{--} Jun 2023)} \\ \vspace{3pt}
         
-        \textbf{Kocaeli Science High School Valedictorian Award:}{ Graduated as the highest ranked student. (Jun 2018)}
-    }}
-  \resumeSubHeadingListEnd
+%         \textbf{Kocaeli Science High School Valedictorian Award:}{ Graduated as the highest ranked student. (Jun 2018)}
+%     }}
+%   \resumeSubHeadingListEnd
 
 
 
@@ -302,24 +344,48 @@
     \resumeSubHeadingListStart
       
       \resumeProjectHeading
-        {\textbf{Filters and Fractals} $|$ \emph{\href{https://github.com/arasgungore/filters-and-fractals}{\color{blue}GitHub}}}{}
+        {\textbf{West Virginia Drug Epidemic Dashboard} $|$ \emph{Tableau}}{}                            %\emph{\href{https://github.com/arasgungore/filters-and-fractals}{\color{blue}GitHub}}}{}
           \resumeItemListStart
-            \resumeItem{A C project which implements a variety of image processing operations that manipulate the size, filter, brightness, contrast, saturation, and other properties of PPM images from scratch and recursive fractal generation functions to model popular fractals including Mandelbrot set, Julia set, Koch curve, Barnsley fern, and Sierpinski triangle.}
+            \resumeItem{A user-friendly interactive dashboard created in Tableau to aid exploring the intra and interrelationships between multiple factors affecting the root causes, growth, and impact of the drug epidemic in West Virginia. This dashboard also serves as a research tool for anyone interested in exploring the factors we identified.}
           \resumeItemListEnd
       
       \resumeProjectHeading
-        {\textbf{Chess Bot} $|$ \emph{\href{https://github.com/arasgungore/chess-bot}{\color{blue}GitHub}}}{}
+        {\textbf{Neural Radiance Field (NeRF)} $|$ \emph{Computer Vision}}{}                 %\emph{\href{https://github.com/arasgungore/chess-bot}{\color{blue}GitHub}}}{}
           \resumeItemListStart
-            \resumeItem{A C++ project in which you can play chess against an AI with a specified decision tree depth that uses alpha-beta pruning algorithm to predict the optimal move. Aside from basic moves, this mini chess engine also implements chess rules such as castling, en passant, fifty-move rule, threefold repetition, and pawn promotion.}
+            \resumeItem{A simplistic approach to generating novel views of any sample 2D dataset, using Agisoft Metashape to perform photogrammetric processing of the images, then utilizing a NeRF to generate a three dimensional short video of the 2D dataset}
           \resumeItemListEnd
       
       \resumeProjectHeading
-        {\textbf{DS\&A Projects} $|$ \emph{\href{https://github.com/arasgungore/CMPE250-projects}{\color{blue}GitHub}}}{}
+        {\textbf{Forecasting Tech Layoff since COVID-19 Pandemic} $|$ \emph{Data Science}}{}                                  %\emph{\href{https://github.com/arasgungore/CMPE250-projects}{\color{blue}GitHub}}}{}
           \resumeItemListStart
-            \resumeItem{Five Java projects that apply DS\&A concepts such as discrete-event simulation using priority queues, Dijkstra's shortest path algorithm, Prim's algorithm to find the minimum spanning tree, Dinic's algorithm for maximum flow problems, and weighted job scheduling with dynamic programming to real-world problems.}
+            \resumeItem{A data science project that utilizes open source data to explore and analyze Tech layoffs since the onset of the COVID-19 pandemic, and use deep learning models like Recurrent Neural Network (RNN), Gated Recurrent Unit (GRU), and Long short-term Memory (LSTM) to forecast future tech employee hire/fire trends.}
           \resumeItemListEnd
       
     \resumeSubHeadingListEnd
+
+
+
+
+
+
+%----------- PUBLICATIONS AND PRESENTATIONS -----------
+
+\section{Publications \& Presentations}
+  \vspace{2pt}
+  \resumeSubHeadingListStart
+    \small{\item{
+        \textbf{V. Brume}{, R. J. Zaveri, and G. Doretto, "Few-Shot Adaptation for Morphology-Independent Cell Instance Segmentation,” IEEE International Symposium on Biomedical Imaging (ISBI), 2024.} \\ \vspace{3pt}
+
+        \textbf{V. Brume}{, M. Frazier, and A. Farson-Ciccone, “A Big Data Visualization Approach to Exploring Root Cause, Growth, and Impacts of West Virginia Drug Epidemic”, Benjamin Statler College of Engineering and Mineral Resources, WVU, Dec. 15, 2022.} \\ \vspace{3pt}
+    
+        {S. Shivam, \textbf{V. Brume}, and Wojciech Mazurek, “Simplifying NeRF: it’s NeRF or nothing”, Lane Department of Computer Science and Electrical Engineering, WVU, Dec. 16, 2022.} \\ \vspace{3pt}
+        
+        \textbf{V. Brume}{, “Data Analysis and Forecasting of Tech Layoffs Since COVID-19 Pandemic”, Benjamin Statler College of Engineering and Mineral Resources, WVU, Dec. 13, 2022.} \\ \vspace{3pt}
+    }}
+  \resumeSubHeadingListEnd
+
+
+
 
 
 
@@ -349,15 +415,51 @@
 
 
 
+
+
+
 %----------- ORGANIZATIONS -----------
 
-% \section{Organizations}
-  % \resumeSubHeadingListStart
+\section{Organizations}
+  \resumeSubHeadingListStart
     
-    % \resumeOrganizationHeading
-      % {Institute of Electrical and Electronics Engineers (IEEE)}{Feb 2022 -- Present}{Student Member}
+    \resumeOrganizationHeading
+      {Institute of Electrical and Electronics Engineers (IEEE)}{Jan 2023 -- Present}{Student Member}
+
+    \resumeOrganizationHeading
+      {Institute of Electrical and Electronics Engineers (IEEE) Computer Society}{Jan 2023 -- Present}{Student Member}
+
+    \resumeOrganizationHeading
+      {Association of Computing Machinery (ACM)}{Jan 2023 -- Present}{Student Member}
+
+    \resumeOrganizationHeading
+      {National Society of Black Engineers (NSBE)}{August 2022 -- Present}{Student Member}
+
+    \resumeOrganizationHeading
+      {African Students Association (ASA)}{August 2022 -- Present}{Student Member}
     
-  % \resumeSubHeadingListEnd
+  \resumeSubHeadingListEnd
+
+
+
+
+
+
+%----------- COMMUNITY SERVICE -----------
+
+\section{Community Service}
+  \resumeSubHeadingListStart
+    
+    \resumeOrganizationHeading
+      {AIWVU Introduction to Python/AI Workshop}{May 11 \& 12, 2022}{Co-facilitator}
+
+    \resumeOrganizationHeading
+      {Science and Engineering Fair of Metro Detroit (SEFMD) 2024}{March 11 -- 16, 2024}{Judge}
+
+    \resumeOrganizationHeading
+      {WVU Summer Undergraduate Research Symposium}{July 25, 2024}{Science Judge}
+    
+  \resumeSubHeadingListEnd
 
 
 
